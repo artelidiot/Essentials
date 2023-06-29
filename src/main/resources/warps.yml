@@ -1,0 +1,7 @@
+# This is where all data will be stored for created warps.
+# Go create some warps using the in-game command '/add-warp <warp-name>'!
+# While it is not recommended, you can manually create warps using the following syntax:
+#   <warp-name>:
+#     # Location format is X, Y, Z, Yaw, Pitch
+#     location: 0.5, 100.0, 0.5, 0.0, 90.0
+warps: {}

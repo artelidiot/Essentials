@@ -1,0 +1,55 @@
+# Responses for the '/essentials' command.
+reload: "&aSuccessfully reloaded Essentials."
+reload-failed: "&eEssentials failed to reload, check the console for details."
+
+# Responses for the '/fly' command.
+fly: "&7Successfully switched your flight status to &e%s&7."
+fly-other: "&7Successfully switched the flight status of &e%s &7to &e%s&7."
+fly-auto: "&7Automatically switched your flight status to &e%s&7."
+
+# Responses for the '/gamemode' command.
+gamemode: "&7Successfully switched your mode to &e%s&7."
+gamemode-other: "&7Successfully switched the mode of &e%s &7to &e%s&7."
+gamemode-no-permission: "&7You don't have permission to switch your mode to &e%s&7."
+
+# Responses for the '/seen' command.
+seen: "&e%s &7has been &e%s %7for &e%s&7."
+seen-ip-address: "&7The IP address of &e%s &7is &e%s&7."
+seen-location: "&7The last known location of &e%s &7is &eX: %s&7, &eY: %s&7, &eZ: %s&7."
+
+# Responses for the '/vanish' command.
+vanish: "&7Successfully switched your vanish status to &e%s&7."
+vanish-other: "&7Successfully switched the vanish status of &e%s &7to &e%s&7."
+vanish-auto: "&7Automatically switched your vanish status to &e%s&7."
+
+# Generic responses for player lookups.
+player-not-found: "&eWe couldn't find anyone by the name of &6'%s'&e."
+player-only: "&eOnly players can use that command."
+
+# Dynamic command placeholders.
+header: "&a%s &8- &aPage: &f%s&7/&f%s"
+footer: "&aType &f/%s %s &ato read the next page."
+
+# Generic placeholders.
+enabled: "&a[ON]"
+disabled: "&c[OFF]"
+online: "online"
+offline: "offline"
+survival: "survival"
+creative: "creative"
+adventure: "adventure"
+spectator: "spectator"
+
+# Generic time translations.
+second: "second"
+seconds: "seconds"
+minute: "minute"
+minutes: "minutes"
+hour: "hour"
+hours: "hours"
+day: "day"
+days: "days"
+month: "month"
+months: "months"
+year: "year"
+years: "years"

@@ -1,0 +1,27 @@
+label: "Rules"
+description: "The server's rules"
+
+command: "/rules"
+command-aliases: [ ]
+command-permission: "essentials.rules"
+
+# The number of lines this command will send at once before cutting off and requiring an additional page
+# The chat window (in Vanilla) is limited to 20 lines of text.
+# Assuming the header and footer are enabled and only take up one line each, that leaves us with 18 lines to work with per-page.
+cut-off: 18
+# Should this command send a header?
+apply-header: true
+# Should this command send a footer?
+apply-footer: true
+
+# You can override the locale's header and footer in these files as well.
+# By default, we use the keys found in 'locale.yml'.
+header: "{@header}"
+footer: "{@footer}"
+
+# There are several functions available, check the wiki to view them all!
+functions:
+  - send-message: |-
+      [1] Be respectful
+      [2] Be ethical
+      [3] Use common sense

@@ -1,0 +1,11 @@
+# IntelliJ
+.idea/
+out/
+*.iml
+
+# Maven
+target/
+
+# macOS
+.DS_Store
+._*

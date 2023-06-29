@@ -1,0 +1,156 @@
+name: Essentials
+author: Artel
+description: "${project.description}"
+
+version: 1.0.0-SNAPSHOT
+main: me.artel.essentials.EssentialsPlugin
+api-version: '1.13'
+
+softdepend: [ Vault, PlaceholderAPI ]
+
+commands:
+  essentials:
+    permission: essentials.reload
+    usage: /<command>
+
+  broadcast: {}
+  fly:
+    permission: essentials.fly
+    usage: /<command> [player]
+  gamemode:
+    permission: essentials.gamemode
+    usage: /<command> <survival|creative|adventure|spectator> [player]
+  seen:
+    permission: essentials.seen
+    usage: /<command> <player>
+  vanish:
+    permission: essentials.vanish
+    usage: /<command> [player]
+
+  # Commands with multiple sub-commands
+  mail: {}
+  mail-override: {}
+  mail-toggle: {}
+
+  message: {}
+  message-override: {}
+  message-toggle: {}
+
+  teleport: {}
+  teleport-override: {}
+  teleport-request: {}
+  teleport-accept: {}
+  teleport-reject: {}
+  teleport-toggle: {}
+
+  add-warp: {}
+  delete-warp: {}
+  warp: {}
+
+permissions:
+  essentials.*:
+    description: Grants access to everything from Essentials.
+    children:
+      essentials.reload:
+        description: Grants access to reload Essentials.
+
+      # Flight permissions
+      essentials.fly.*:
+        description: Grants access to all flight permissions.
+        children:
+          essentials.fly:
+            description: Grants access to the fly command.
+          essentials.fly.others:
+            description: Grants access to toggle fly for others.
+
+      # Gamemode permissions
+      essentials.gamemode.*:
+        description: Grants access to all gamemode permissions.
+        children:
+          essentials.gamemode:
+            description: Grants access to the gamemode command.
+          essentials.gamemode.others:
+            description: Grants access to change the gamemodes of others.
+          essentials.gamemode.use.*:
+            description: Grants access to all gamemodes.
+            children:
+              essentials.gamemode.use.survival:
+                description: Grants access to the survival gamemode.
+              essentials.gamemode.use.creative:
+                description: Grants access to the creative gamemode.
+              essentials.gamemode.use.adventure:
+                description: Grants access to the adventure gamemode.
+              essentials.gamemode.use.spectator:
+                description: Grants access to the spectator gamemode.
+
+      # Seen permissions
+      essentials.seen.*:
+        description: Grants access to all seen permissions.
+        children:
+          essentials.seen:
+            description: Grants access to the seen command.
+          essentials.seen.ip:
+            description: Grants access to view IP addresses when performing the seen command.
+          essentials.seen.location:
+            description: Grants access to view locations (X/Y/Z) when performing the seen command.
+
+      # Vanish permissions
+      essentials.vanish.*:
+        description: Grants access to all vanish permissions.
+        children:
+          essentials.vanish:
+            description: Grants access to the vanish command.
+          essentials.vanish.others:
+            description: Grants access to toggle vanish for others.
+
+      # Mail permissions
+      essentials.mail.*:
+        description: Grants access to all mail permissions.
+        children:
+          essentials.mail:
+            description: Grants access to the mail command.
+          essentials.mail.override:
+            description: Grants access to send mail to others with toggled mail.
+          essentials.mail.toggle:
+            description: Grants access to toggle receiving mail.
+
+      # Message permissions
+      essentials.message.*:
+        description: Grants access to all message permissions.
+        children:
+          essentials.message:
+            description: Grants access to the message command.
+          essentials.message.override:
+            description: Grants access to send messages to others with toggled messages.
+          essentials.message.toggle:
+            description: Grants access to toggle receiving messages.
+
+      # Teleport permissions
+      essentials.teleport.*:
+        description: Grants access to all teleport permissions.
+        children:
+          essentials.teleport:
+            description: Grants access to the teleport command.
+          essentials.teleport.override:
+            description: Grants access to forcibly teleport to others with toggled teleports.
+          essentials.teleport.request:
+            description: Grants access to request teleports to others.
+          essentials.teleport.accept:
+            description: Grants access to accept teleport requests.
+          essentials.teleport.reject:
+            description: Grants access to reject teleport requests.
+          essentials.teleport.toggle:
+            description: Grants access to toggle teleports.
+
+      # Warp permissions
+      essentials.warp.*:
+        description: Grants access to all warp permissions.
+        children:
+          essentials.warp:
+            description: Grants access to the warp command.
+          essentials.warp.create:
+            description: Grants access to create warps.
+          essentials.warp.delete:
+            description: Grants access to delete warps.
+          essentials.warp.use.*:
+            description: Grants access to use all warps.

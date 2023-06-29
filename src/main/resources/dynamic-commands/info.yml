@@ -1,0 +1,39 @@
+label: "Info"
+description: "Informative server commands"
+
+command: "/info"
+command-aliases: [ ]
+command-permission: "essentials.info"
+
+# The number of lines this command will send at once before cutting off and requiring an additional page
+# The chat window (in Vanilla) is limited to 20 lines of text.
+# Assuming the header and footer are enabled and only take up one line each, that leaves us with 18 lines to work with per-page.
+cut-off: 18
+# Should this command send a header?
+apply-header: true
+# Should this command send a footer?
+apply-footer: true
+
+# You can override the locale's header and footer in these files as well.
+# By default, we use the keys found in 'locale.yml'.
+header: "{@header}"
+footer: "{@footer}"
+
+functions:
+  - send-message: |-
+      Please choose a topic to be informed about!
+      Available topics are as follows: %s
+
+# These are chapters; allowing you to better organize topics and pages.
+chapters:
+  # For example, this chapter can be accessed by performing '/info essentials'.
+  #   While not necessary, we recommend surrounding chapters with quotation marks or apostrophes (as seen below) to easily distinguish where one ends and another begins.
+  - 'essentials':
+      # Optionally, you can choose if a chapter requires a viewing permission.
+      #   Essentials will automatically generate a permission based on the 'command-permission' and chapter name (found above).
+      #   For example, this permission will be generated as 'essentials.info.essentials'.
+      requires-permission: true
+      # There are several functions available, check the wiki to view them all!
+      functions:
+        - send-message: |-
+            This server is running Essentials ver. ${project.version}!

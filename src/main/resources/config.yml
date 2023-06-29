@@ -1,0 +1,20 @@
+# Should airborne players with permission to fly automatically be set to flying when they log in?
+automatic-flight: false
+# Should we automatically enable vanish for players who have permission when they join?
+automatic-vanish: false
+
+# Should players be allowed to stylize their nickname with color and formatting codes?
+#   If this is false, players will only be allowed to use letters (case-insensitive), numbers and underscores.
+nickname-styling: true
+# Should players be allowed to alter their nickname to differ from their username?
+#   For example, if the player "NotNotch" tried to change their nickname to "Notch" and this setting is true, it would be prevented.
+nickname-restricted-to-username: false
+# The maximum length a nickname can be.
+#   By default, this is the maximum length of a Minecraft username.
+nickname-maximum-length: 16
+
+# Should warping require permission per-warp?
+# Per-warp Permissions Setup:
+#   Permission to use all warps: 'essentials.warp.use.*'
+#   Per-warp permission: 'essentials.warp.use.<warp-name>' e.g. 'essentials.warp.use.shop'
+per-warp-permission: false
